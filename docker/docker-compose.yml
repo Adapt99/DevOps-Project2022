@@ -1,6 +1,9 @@
+#Top-level version property is defined by the specification for backward compatibility but is only informative
 version: "3.3"
 services:
+#The web service uses an iamge that's built at the public location below
   web:
     image: devopsjourney1/myflaskimg:1
+    #It then binds the container and the host machine to the exposed port, 5000. This example service uses the default port for the Flask web server, 5000
     ports:
       - "5000:5000"
